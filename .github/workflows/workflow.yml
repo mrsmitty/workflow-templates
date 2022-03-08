@@ -12,7 +12,7 @@ jobs:
       with:
         environment_name: non-production
 
-    prod_deployment:
+  prod_deployment:
     runs-on: ubuntu-latest
     environment: production
     steps:
