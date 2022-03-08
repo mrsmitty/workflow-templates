@@ -11,5 +11,6 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment_name }}
     steps:
     - run: echo "$ENV on $GITHUB_REF"
