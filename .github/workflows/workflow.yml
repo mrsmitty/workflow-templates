@@ -5,19 +5,13 @@ on:
 
 jobs:
   dev_deployment:
-    runs-on: ubuntu-latest
     environment: non-production
-    steps:
-    - uses: actions/checkout@v2
-    - uses: mrsmitty/workflow-templates/.github/workflows/template.yml@main
-      with:
-        environment_name: non-production
+    uses: mrsmitty/workflow-templates/.github/workflows/template.yml@main
+    with:
+      environment_name: non-production
 
   prod_deployment:
-    runs-on: ubuntu-latest
     environment: production
-    steps:
-    - uses: actions/checkout@v2
-    - uses: mrsmitty/workflow-templates/.github/workflows/template.yml@main
+    uses: mrsmitty/workflow-templates/.github/workflows/template.yml@main
       with:
         environment_name: production

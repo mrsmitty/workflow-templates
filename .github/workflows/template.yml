@@ -10,5 +10,6 @@ env:
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     steps:
     - run: echo "$ENV on $GITHUB_REF"
