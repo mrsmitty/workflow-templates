@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: non-production
     steps:
+    - uses: actions/checkout@v2
     - uses: ./.github/workflows/template
       with:
         environment_name: non-production
@@ -16,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
+    - uses: actions/checkout@v2
     - uses: ./.github/workflows/template
       with:
         environment_name: production
