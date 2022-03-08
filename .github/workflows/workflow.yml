@@ -8,14 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     environment: non-production
     steps:
-      - uses: ./.github/workflows/template
-        with:
-          environment_name: non-production
+    - uses: ./.github/workflows/template
+      with:
+        environment_name: non-production
 
     prod_deployment:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - uses: ./.github/workflows/template
-        with:
-          environment_name: production
+    - uses: ./.github/workflows/template
+      with:
+        environment_name: production
