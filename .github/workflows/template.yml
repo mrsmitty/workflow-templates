@@ -7,8 +7,8 @@ on:
 
 env:
   ENV: ${{ inputs.environment_name }}
-  
+
 jobs:
   deploy:
     steps:
-      -run: echo "$ENV on $GITHUB_REF"
+    - run: echo "$ENV on $GITHUB_REF"
