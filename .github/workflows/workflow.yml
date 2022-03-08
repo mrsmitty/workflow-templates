@@ -1,0 +1,21 @@
+name: workflow-template-demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  dev_deployment:
+    runs-on: ubuntu-latest
+    environment: non-production
+    steps:
+      - uses: ./.github/workflows/template
+        with:
+          environment_name: non-production
+
+    prod_deployment:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: ./.github/workflows/template
+        with:
+          environment_name: production

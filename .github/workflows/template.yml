@@ -1,0 +1,14 @@
+on:
+  workflow_call:
+    inputs:
+      environment_name:
+        required: true
+        type: string
+
+env:
+  ENV: ${{ inputs.environment_name }}
+  
+jobs:
+  deploy:
+    steps:
+      -run: echo "$ENV on $GITHUB_REF"
