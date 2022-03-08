@@ -5,13 +5,11 @@ on:
 
 jobs:
   dev_deployment:
-    environment: non-production
     uses: mrsmitty/workflow-templates/.github/workflows/template.yml@main
     with:
       environment_name: non-production
 
   prod_deployment:
-    environment: production
     uses: mrsmitty/workflow-templates/.github/workflows/template.yml@main
     with:
       environment_name: production
