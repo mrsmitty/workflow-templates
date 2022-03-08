@@ -13,5 +13,5 @@ jobs:
   prod_deployment:
     environment: production
     uses: mrsmitty/workflow-templates/.github/workflows/template.yml@main
-      with:
-        environment_name: production
+    with:
+      environment_name: production
