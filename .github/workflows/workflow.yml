@@ -5,7 +5,7 @@ env:
   BRANCH_CONDITION: ${{ github.ref == 'refs/heads/dev' }}
 jobs:
   dev_deployment:
-    if: ${{ env.BRANCH_CONDITION == True }}
+    if: (github.ref == 'refs/heads/dev')
     uses: mrsmitty/workflow-templates/.github/workflows/template.yml@main
     with:
       environment_name: non-production
