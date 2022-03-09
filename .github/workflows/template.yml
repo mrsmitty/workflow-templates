@@ -14,4 +14,4 @@ jobs:
     environment: ${{ inputs.environment_name }}
     steps:
     - run: echo "$ENV on $GITHUB_REF"
-    - run: ./secrets.sh
+    - run: . .github/workflows/scripts/secrets.sh
