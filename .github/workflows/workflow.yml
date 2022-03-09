@@ -12,6 +12,7 @@ jobs:
 
   prod_deployment:
     if: (github.ref == 'refs/heads/main')
+    need: dev_deployment
     uses: mrsmitty/workflow-templates/.github/workflows/template.yml@main
     with:
       environment_name: production
