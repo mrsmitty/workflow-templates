@@ -13,5 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment_name }}
     steps:
+    - uses: actions/checkout@v2
     - run: echo "$ENV on $GITHUB_REF" && pwd
-    - run: . .github/workflows/scripts/secrets.sh
+    - run: . ./.github/workflows/scripts/secrets.sh
