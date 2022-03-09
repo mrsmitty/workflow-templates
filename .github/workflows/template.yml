@@ -13,5 +13,5 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment_name }}
     steps:
-    - run: echo "$ENV on $GITHUB_REF"
+    - run: echo "$ENV on $GITHUB_REF" && pwd
     - run: . .github/workflows/scripts/secrets.sh
