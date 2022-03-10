@@ -1,18 +1,16 @@
 name: workflow-template-demo
 
 on: [push, workflow_dispatch]
-env:
-  BRANCH_CONDITION: ${{ github.ref == 'refs/heads/dev' }}
+
 jobs:
   dev_deployment:
-    if: false
     uses: mrsmitty/workflow-templates/.github/workflows/template.yml@main
     with:
       environment_name: non-production
 
   prod_deployment:
     if: (github.ref == 'refs/heads/main')
-    need: dev_deployment
+    needs: dev_deployment
     uses: mrsmitty/workflow-templates/.github/workflows/template.yml@main
     with:
       environment_name: production
