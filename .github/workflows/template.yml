@@ -17,3 +17,4 @@ jobs:
     - run: echo "$ENV on $GITHUB_REF" && pwd
     - run: . ./.github/workflows/scripts/secrets.sh
     - run: . ./.github/workflows/scripts/do-stuff.sh
+    - run: . ./.github/workflows/scripts/final-stuff.sh

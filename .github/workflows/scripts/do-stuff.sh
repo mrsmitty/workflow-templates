@@ -6,3 +6,7 @@ echo "B_VALUE=${B_VALUE}" >> $GITHUB_ENV
 echo "A_VALUE=${A_VALUE}"
 echo "B_VALUE=${B_VALUE}"
 echo "A_SECRET=${A_SECRET}" 
+
+echo "::add-mask::$B_VALUE"
+
+echo "B_VALUE=${B_VALUE}"
