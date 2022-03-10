@@ -9,7 +9,7 @@ jobs:
       environment_name: non-production
 
   prod_deployment:
-    if: (github.ref == 'refs/heads/main')
+    if: false || (github.ref == 'refs/heads/main')
     needs: dev_deployment
     uses: mrsmitty/workflow-templates/.github/workflows/template.yml@main
     with:
